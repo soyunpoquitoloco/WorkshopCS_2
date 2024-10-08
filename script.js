@@ -6,7 +6,7 @@ const outputDiv = document.getElementById('output');
 let socket = null;
 
 connectButton.addEventListener('click', () => {
-  const domainName = '10.1.224.31'; // Remplacez par votre domaine ou votre service DDNS
+  const domainName = '10.1.224.75'; // Remplacez par votre domaine ou votre service DDNS
   socket = new WebSocket(`ws://${domainName}`);
 
   socket.onopen = () => {

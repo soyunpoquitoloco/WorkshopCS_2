@@ -1,0 +1,85 @@
+/* Définition des variables pour les couleurs et les polices */
+:root {
+    --couleur-principale: #3498db;
+    --couleur-secondaire: #f1c40f;
+    --police-principale: Arial, sans-serif;
+  }
+  
+  /* Mise en page générale */
+  body {
+    font-family: var(--police-principale);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    background-color: var(--couleur-principale);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .left, .right {
+    width: 20%;
+    background-color: var(--couleur-secondaire);
+    padding: 10px;
+  }
+  
+  .footer {
+    background-color: var(--couleur-principale);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #output {
+    background-color: #571c1c;
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    max-height: 200px; /* Hauteur maximale du terminal */
+  }
+
+  /* Médias queries pour adapter la mise en page en fonction de la largeur de l'écran */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: row;
+    }
+    .main {
+      flex-grow: 0;
+      width: 60%;
+    }
+    .left, .right {
+      width: 20%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      flex-direction: column;
+    }
+    .main {
+      width: 100%;
+    }
+    .left, .right {
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
