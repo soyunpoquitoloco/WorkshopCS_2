@@ -1,6 +1,6 @@
 /* Définition des variables pour les couleurs et les polices */
 :root {
-    --couleur-principale: #3498db;
+    --couleur-principale: #A7D637;
     --couleur-secondaire: #f1c40f;
     --police-principale: Arial, sans-serif;
   }
@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Jura;
   }
   
   .header {
@@ -26,24 +27,30 @@
     color: #fff;
     padding: 10px;
     text-align: center;
+
   }
   
   .main {
+    /* Add the following properties */
+    width: 100vw; /* Take up the full width of the viewport */
+    height: 100vh; /* Take up the full height of the viewport */
+    margin: 0; /* Remove any margin */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-  }
+    background-color: #9CAFB7;
+}
   
   .left, .right {
     width: 20%;
     background-color: var(--couleur-secondaire);
-    padding: 10px;
+    /*padding: 10px;*/
   }
   
   .footer {
-    background-color: var(--couleur-principale);
+    background-color: #9CAFB7;
     color: #fff;
     padding: 10px;
     text-align: center;
