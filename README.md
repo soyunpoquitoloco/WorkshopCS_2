@@ -12,6 +12,7 @@ Palette de couleur :
 Police utilisée : Jura
 
 J'ai coupé les passages d'attente de connexion pour éviter une vidéo trop longue sauf pour la LED je l'ai laissé pour montrer que tout fonctionne bien. 
+
 https://github.com/user-attachments/assets/c2589943-bacd-4856-9a95-99ab53b07c99
 
 Pour mieux comprendre l'agencement des pages html : index.html est la page d'accueil, index2.html est la page principale, puis chaque page html porte le nom de son capteur correspondant. La page style.css s'applique à index et index2 et styleLED.css s'applique à tout le reste.
