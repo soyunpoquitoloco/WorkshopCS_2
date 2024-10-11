@@ -1,0 +1,241 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Jura",sans-serif;
+  }
+  input[type="textM"] {
+    background-color: #001011; /* set the background color to black */
+    border: none; /* remove the default border */
+    padding: 0; /* remove the default padding */
+    font-size: 50px; /* set the font size to a suitable value */
+    text-align: center; /* center the text horizontally */
+    color: #A7D637; /* set the text color to white */
+  }
+  input[type="textT"] {
+    background-color: #001011; /* set the background color to black */
+    border: none; /* remove the default border */
+    padding: 0; /* remove the default padding */
+    font-size: 25px;
+    text-align: center; /* center the text horizontally */
+    color: #A7D637; /* set the text color to white */
+  }
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh; /* set body height to 100vh */
+    display: flex; /* make body a flex container */
+    flex-direction: column; /* stack elements vertically */
+  }
+  
+  /* Header styles */
+  .header {
+    background-color: #A09EBB;
+    color: #A7D637;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Main styles */
+  .main {
+    display: flex; /* make main a flex container */
+    flex: 1; /* take up remaining space */
+    flex-direction: row;
+  }
+  
+  .right {
+    flex: 2; /* take up twice the space of left section */
+    background-color: #001011; /* dark gray background */
+    padding: 1rem;
+    display: flex; /* make right section a flex container */
+    flex-direction: column; /* stack elements vertically */
+  }
+  
+  
+  .right button, .right input {
+    width: 30%; /* make buttons and input full-width */
+    
+  }
+  
+  .right #output {
+    flex: 1; /* take up remaining space */
+    overflow-y: auto; /* add scrollbar if output is too long */
+    padding: 1rem;
+    border: 1px solid #ccc; /* add a border around output */
+    color:#A7D637;
+    max-height: 600px; /* Hauteur maximale du terminal */
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #9CAFB7; /* light gray background */
+    padding: 1rem;
+    height: 50vh;
+    
+  }
+
+  .sent {
+    flex-direction: row;
+  }
+  
+  #captor {
+    background-color: #A09EBB;
+    color: #A7D637;
+    padding: 0px;
+    text-align: center;
+    flex-direction: column;
+    width: 70vw;
+  }
+  #kaptor {
+    font-size: 100px;
+  }
+  #Measure {
+    margin-top: 20vh;
+    font-size: 50px;
+    
+  }
+
+  #send-button-frequency {
+    background-color: #001011; /* set the background color to dark gray */
+    color: #A7D637; /* set the text color to white */
+    border: none; /* remove the default border */
+    font-size: 50px; /* set the font size to a suitable value */
+    cursor: pointer; /* change the cursor shape to a pointing hand */
+    transition: background-color 0.2s; /* add a transition effect */
+  }
+  
+  #send-button-frequency:hover {
+    background-color: #444; /* darken the background color on hover */
+  }
+  #Back {
+        background-color: transparent; /* remove the default background color */
+        border: none; /* remove the default border */
+        zoom: 4;
+        cursor: pointer; /* change the cursor shape to a pointing hand */
+        color: #001011;
+  }
+    #Back:hover {
+    background-color: #A7D637; /* add a light gray background color on hover */
+    border-radius: 10px;
+    animation: pulse 1s infinite;
+  }
+  #Back i {
+    font-size: 100px; /* set the font size of the icon */
+    color: #7f0b0b; /* set the color of the icon */
+  }
+  #outputUltrasonic {
+    font-size: 50px;
+    padding-bottom: 0px;
+    background-color: #001011;
+  }
+  #outputTemp {
+    font-size: 50px;
+    padding-bottom: 0px;
+    background-color: #001011;
+  }
+  #outputHum {
+    font-size: 50px;
+    padding-bottom: 0px;
+    background-color: #001011;
+  }
+  #outputLED {
+    font-size: 50px;
+    padding-bottom: 0px;
+    background-color: #001011;
+  }
+  #Terminal {
+    font-size: 50px;
+    color: #A7D637;
+    text-align: center;
+  }
+  .carré-clignotant {
+    width: 5px;
+    height: 5px;
+    background-color: #A7D637; /* couleur rouge */
+    animation: clignotement 1s infinite;
+  }
+  #send-button {
+    background-color: #A7D637;
+    color: #001011;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  #send-button:hover {
+    background-color: #55672b; /* add a light gray background color on hover */
+    border-radius: 10px;
+  }
+  @keyframes clignotement {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+    /* Médias queries pour adapter la mise en page en fonction de la largeur de l'écran */
+    @media (max-width: 500px) {
+        .main {
+          flex-grow: 0;
+          
+        }
+        #kaptor {
+            font-size: 300%;
+            padding-bottom: 50px;
+        }
+        #Terminal {
+            font-size: 100%;
+        }
+        #sent {
+            display:none;
+        }
+        #Back {
+            background-color: transparent; /* remove the default background color */
+            border: none; /* remove the default border */
+            zoom: 4;
+            cursor: pointer; /* change the cursor shape to a pointing hand */
+            color: #001011;
+            padding-top: 50px;
+      }
+      #Measure {
+        padding: 0px;
+        margin: 0px;
+        font-size: 250%;
+      }
+      #outputTemp {
+        font-size: 100%;
+        padding-bottom: 0px;
+        background-color: #001011;
+      }
+      #outputHum {
+        font-size: 100%;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+        background-color: #001011;
+      }
+      #frequency-input {
+        font-size: 150%;
+        height: 10vh;
+      }
+      #send-button-frequency {
+        font-size: 150%;
+        height: 10vh;
+        padding-left: 20vw;
+        padding-right: 20vw;
+        margin-bottom: 10px;
+      }
+      }
